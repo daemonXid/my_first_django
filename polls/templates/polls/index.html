@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Polls</title>
-  </head>
-  <body>
-    {% if latest_question_list %}
-    <h1>설문조사 목록</h1>
-    <ul>
-      {% for question in latest_question_list %}
-      <li><a href="#">{{ question.question_text }}</a></li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>설문조사가 없습니다.</p>
-    {% endif %}
-  </body>
-</html>
+{% extends 'polls/base.html' %}
+{% block name %}자식 html{% endblock %}
+{% block lion %}<h2>Hello World!!</h2>{% endblock %}
+
+{% block content %}
+<h1>인덱스 페이지입니다!</h1>
+{% endblock %}
